@@ -1,0 +1,86 @@
+:root {
+  --font-ui:
+    -apple-system,
+    BlinkMacSystemFont,
+    "PingFang SC",
+    "Microsoft YaHei",
+    "Noto Sans SC",
+    "Source Han Sans SC",
+    Arial,
+    sans-serif;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-ui);
+}
+
+/* 确保数字显示符合规范：普通 0，不使用带斜线零 */
+.numeric-text,
+.table-number,
+.order-number,
+.phone-number,
+.stat-number,
+.date-number,
+.font-mono {
+  font-family: var(--font-ui);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "zero" 0;
+}
+
+td, span, div, p, h1, h2, h3, h4 {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "zero" 0;
+}
+
+@keyframes gradient-float {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  50% {
+    transform: translate(-8%, 12%) scale(1.15);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+@keyframes gradient-float-reverse {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  50% {
+    transform: translate(10%, -10%) scale(1.2);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+.animate-gradient-float {
+  animation: gradient-float 18s ease-in-out infinite;
+}
+
+.animate-gradient-float-reverse {
+  animation: gradient-float-reverse 22s ease-in-out infinite;
+}
+
+/* 自定义极简滚动条 */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
